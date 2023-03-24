@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void arithmetic(int a, int b, int *sum, int *diff, int *prod);
+
+int main() {
+    int a = 10, b = 20;
+    int sum, diff, prod;
+
+    arithmetic(a, b, &sum, &diff, &prod);
+
+    printf("Sum: %d\n", sum);
+    printf("Difference: %d\n", diff);
+    printf("Product: %d\n", prod);
+
+    return 0;
+}
+
+void arithmetic(int a, int b, int *sum, int *diff, int *prod) {
+    *sum = a + b;
+    *diff = a - b;
+    *prod = a * b;
+}
